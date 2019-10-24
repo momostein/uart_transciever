@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Brecht Ooms
 // 
 // Create Date: 24.10.2019 11:45:27
 // Design Name: 
 // Module Name: uart_gen_tb
-// Project Name: 
+// Project Name: UART Transciever
 // Target Devices: 
 // Tool Versions: 
 // Description: 

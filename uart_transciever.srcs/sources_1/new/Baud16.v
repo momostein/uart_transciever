@@ -30,11 +30,12 @@ module Baud16(sysclk, reset, baud16);
     parameter maxcount = 813; // (125 MHz / 153.6 kHz) - 1 = 813
     
     always @(posedge sysclk) begin
-        if (!reset || counter==813)
+        if (!reset || counter == maxcount) // Syncronous reset
             counter <= 0;
         else
-            counter <= counter + 1;      
+            counter <= counter + 1;
     end
     
-    assign baud16 = (counter == 813) ? 1 : 0;
+    assign baud16 = (counter == maxcount) ? 1 : 0;
+    
 endmodule
