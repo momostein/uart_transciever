@@ -54,3 +54,10 @@ launch_simulation
 open_wave_config I:/Project/uart_transciever/FSM_tb_behav.wcfg
 source FSM_tb.tcl
 close_sim
+launch_simulation
+open_wave_config I:/Project/uart_transciever/FSM_tb_behav.wcfg
+source FSM_tb.tcl
+close_sim
+launch_simulation
+open_wave_config I:/Project/uart_transciever/FSM_tb_behav.wcfg
+source FSM_tb.tcl
