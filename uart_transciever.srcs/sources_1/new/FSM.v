@@ -20,19 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module FSM(RxD,reset,baud16,valid,midbit,sysclk, shift);
+module FSM(RxD,reset,baud16,valid,midbit,sysclk, shift,state);
     input reset;
     input baud16;
     input sysclk;
     input RxD;
+    input midbit;
     output reg valid;
     output reg shift; 
-    input midbit;
-    reg [0:3] state;
+    output reg [0:3] state;
     parameter IDLE = 4'b0000, STARTBIT =4'b0001, BIT0 = 4'b0010, BIT1 = 4'b0011, BIT2 = 4'b0100, BIT3 = 4'b0101, BIT4 = 4'b0110, BIT5 = 4'b0111,BIT6 = 4'b1000,BIT7 = 4'b1001,STOPBIT = 4'b1010;
     always @(posedge sysclk) begin
         if (reset == 1'b0 )begin
         state <= IDLE;
+        valid <= 0;
+        shift <=0;
         end else begin
             if(baud16==1'b1)begin
                 case(state)
