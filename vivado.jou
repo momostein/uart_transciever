@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 12 22:09:50 2019
+# Process ID: 1184
+# Current directory: C:/dev/uni/vivado/uart_transciever
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4748 C:\dev\uni\vivado\uart_transciever\uart_transciever.xpr
+# Log file: C:/dev/uni/vivado/uart_transciever/vivado.log
+# Journal file: C:/dev/uni/vivado/uart_transciever\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/dev/uni/vivado/uart_transciever/uart_transciever.xpr
+r
+add_files -norecurse C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/FSM.v

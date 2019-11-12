@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="FSM_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="FSM_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="10517000fs"></ZoomStartTime>
+      <ZoomEndTime time="193517001fs"></ZoomEndTime>
+      <Cursor1Time time="156525000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="102"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/FSM_tb/sysclk" type="logic">
+      <obj_property name="ElementShortName">sysclk</obj_property>
+      <obj_property name="ObjectShortName">sysclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/RxD" type="logic">
+      <obj_property name="ElementShortName">RxD</obj_property>
+      <obj_property name="ObjectShortName">RxD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/baud16" type="logic">
+      <obj_property name="ElementShortName">baud16</obj_property>
+      <obj_property name="ObjectShortName">baud16</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/midbit" type="logic">
+      <obj_property name="ElementShortName">midbit</obj_property>
+      <obj_property name="ObjectShortName">midbit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/shift" type="logic">
+      <obj_property name="ElementShortName">shift</obj_property>
+      <obj_property name="ObjectShortName">shift</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/state" type="array">
+      <obj_property name="ElementShortName">state[0:3]</obj_property>
+      <obj_property name="ObjectShortName">state[0:3]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>
