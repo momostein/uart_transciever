@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1571913356">
-  <File Type="PA-TCL" Name="Baud16.tcl"/>
-  <File Type="REPORTS-TCL" Name="Baud16_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Baud16.vds"/>
-  <File Type="RDS-UTIL" Name="Baud16_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Baud16_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Baud16.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1573683736">
+  <File Type="PA-TCL" Name="UART_reciever.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="UART_reciever_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="UART_reciever_reports.tcl"/>
+  <File Type="RDS-RDS" Name="UART_reciever.vds"/>
+  <File Type="RDS-UTIL" Name="UART_reciever_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="UART_reciever_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="UART_reciever.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="UART_reciever_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="UART_reciever_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/FSM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Mid_bit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Baud16.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -15,9 +32,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/FSM.v">
+    <File Path="$PSRCDIR/sources_1/new/Shift_reg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UART_reciever.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -25,8 +48,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Baud16"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="UART_reciever"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -36,7 +58,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

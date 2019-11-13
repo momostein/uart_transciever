@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
@@ -24,14 +26,20 @@ create_project -in_memory -part xc7z010clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir I:/Project/uart_transciever/uart_transciever.cache/wt [current_project]
-set_property parent.project_path I:/Project/uart_transciever/uart_transciever.xpr [current_project]
+set_property webtalk.parent_dir C:/dev/uni/vivado/uart_transciever/uart_transciever.cache/wt [current_project]
+set_property parent.project_path C:/dev/uni/vivado/uart_transciever/uart_transciever.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
-set_property ip_output_repo i:/Project/uart_transciever/uart_transciever.cache/ip [current_project]
+set_property ip_output_repo c:/dev/uni/vivado/uart_transciever/uart_transciever.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib I:/Project/uart_transciever/uart_transciever.srcs/sources_1/new/Baud16.v
+read_verilog -library xil_defaultlib {
+  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/FSM.v
+  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Mid_bit.v
+  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Baud16.v
+  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Shift_reg.v
+  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_reciever.v
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -43,12 +51,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top Baud16 -part xc7z010clg400-1
+synth_design -top UART_reciever -part xc7z010clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Baud16.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file Baud16_utilization_synth.rpt -pb Baud16_utilization_synth.pb"
+write_checkpoint -force -noxdef UART_reciever.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file UART_reciever_utilization_synth.rpt -pb UART_reciever_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

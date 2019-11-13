@@ -3,72 +3,49 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Shift_reg_tb_behav.wdb" id="1">
+      <db_ref path="uart_gen_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="Shift_reg_tb" />
             <top_module name="glbl" />
+            <top_module name="uart_gen_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="2346680000001fs"></ZoomEndTime>
-      <Cursor1Time time="310422476000fs"></Cursor1Time>
+      <ZoomEndTime time="4687665002001fs"></ZoomEndTime>
+      <Cursor1Time time="4519888875000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="105"></NameColumnWidth>
-      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+      <NameColumnWidth column_width="121"></NameColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject fp_name="/Shift_reg_tb/sysclk" type="logic">
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/uart_gen_tb/sysclk" type="logic">
       <obj_property name="ElementShortName">sysclk</obj_property>
       <obj_property name="ObjectShortName">sysclk</obj_property>
    </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/reset" type="logic">
+   <wvobject fp_name="/uart_gen_tb/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/baud16" type="logic">
-      <obj_property name="ElementShortName">baud16</obj_property>
-      <obj_property name="ObjectShortName">baud16</obj_property>
+   <wvobject fp_name="/uart_gen_tb/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
    </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/midbit_en" type="logic">
-      <obj_property name="ElementShortName">midbit_en</obj_property>
-      <obj_property name="ObjectShortName">midbit_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/midbit" type="logic">
-      <obj_property name="ElementShortName">midbit</obj_property>
-      <obj_property name="ObjectShortName">midbit</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/RxD" type="logic">
-      <obj_property name="ElementShortName">RxD</obj_property>
-      <obj_property name="ObjectShortName">RxD</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/i" type="array">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/shift_en" type="logic">
-      <obj_property name="ElementShortName">shift_en</obj_property>
-      <obj_property name="ObjectShortName">shift_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/shift_out" type="logic">
-      <obj_property name="ElementShortName">shift_out</obj_property>
-      <obj_property name="ObjectShortName">shift_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/valid" type="logic">
-      <obj_property name="ElementShortName">valid</obj_property>
-      <obj_property name="ObjectShortName">valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/data_shift" type="array">
-      <obj_property name="ElementShortName">data_shift[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_shift[7:0]</obj_property>
+   <wvobject fp_name="/uart_gen_tb/data" type="array">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/Shift_reg_tb/data_out" type="array">
+   <wvobject fp_name="/uart_gen_tb/data_out" type="array">
       <obj_property name="ElementShortName">data_out[7:0]</obj_property>
       <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_gen_tb/data_valid" type="logic">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
    </wvobject>
 </wave_config>

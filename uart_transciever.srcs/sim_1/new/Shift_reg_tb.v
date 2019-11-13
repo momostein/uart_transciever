@@ -23,7 +23,7 @@
 module Shift_reg_tb();
     reg sysclk, reset, midbit_en, shift_en, shift_out, RxD;
     wire baud16, midbit, valid;
-    wire [7:0] data_out, data_shift;
+    wire [7:0] data_out;
     
     Baud16 BAUD(
         sysclk, reset,  // Inputs
@@ -37,7 +37,7 @@ module Shift_reg_tb();
     
     Shift_reg DUT(
         sysclk, reset, baud16, midbit, shift_en, shift_out, RxD,
-        valid, data_out, data_shift
+        valid, data_out
     );
     
     integer i;

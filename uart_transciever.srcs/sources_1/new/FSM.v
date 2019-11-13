@@ -75,7 +75,7 @@ module FSM(sysclk, reset, baud16, midbit, RxD, midbit_en, shift_en, shift_out);
                     state<=STOPBIT;
                 end
                 
-                STOPBIT: begin
+                STOPBIT: if(midbit==1'b1) begin
                     state <=IDLE;
                 end
                 

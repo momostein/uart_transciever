@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Oct 24 12:36:04 2019
-# Process ID: 4508
-# Current directory: I:/Project/uart_transciever/uart_transciever.runs/synth_1
-# Command line: vivado.exe -log Baud16.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Baud16.tcl
-# Log file: I:/Project/uart_transciever/uart_transciever.runs/synth_1/Baud16.vds
-# Journal file: I:/Project/uart_transciever/uart_transciever.runs/synth_1\vivado.jou
+# Start of session at: Wed Nov 13 23:22:19 2019
+# Process ID: 16052
+# Current directory: C:/dev/uni/vivado/uart_transciever/uart_transciever.runs/synth_1
+# Command line: vivado.exe -log UART_reciever.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_reciever.tcl
+# Log file: C:/dev/uni/vivado/uart_transciever/uart_transciever.runs/synth_1/UART_reciever.vds
+# Journal file: C:/dev/uni/vivado/uart_transciever/uart_transciever.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source Baud16.tcl -notrace
+source UART_reciever.tcl -notrace

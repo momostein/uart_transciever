@@ -20,13 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Shift_reg(sysclk, reset, baud16, midbit, enable, shift_out, RxD, valid, data_out, data_shift);
+module Shift_reg(
+        sysclk, reset, baud16, midbit, enable, shift_out, RxD,
+        valid, data_out
+    );
+    
     input wire sysclk, reset, baud16, midbit, enable, shift_out, RxD;
     
     output reg valid;
     output reg [7:0] data_out;
     
-    output reg [7:0] data_shift;
+    reg [7:0] data_shift;
     
     always @(posedge sysclk) begin
         if (!reset) begin
