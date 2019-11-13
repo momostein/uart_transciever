@@ -27,13 +27,13 @@ module Mid_bit_tb();
     Baud16 BAUD(.sysclk(sysclk), .reset(reset), .baud16(baud16));
     
     reg enable;
-    wire mid_bit;
+    wire midbit;
     integer counter = 0;
     integer i;
         
     Mid_bit DUT(
         .sysclk(sysclk), .reset(reset), .baud16(baud16),
-        .enable(enable), .mid_bit(mid_bit)
+        .enable(enable), .midbit(midbit)
     );
     initial begin
         sysclk = 0;

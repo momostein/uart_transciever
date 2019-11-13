@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Mid_bit(sysclk, reset, baud16, enable, mid_bit);
+module Mid_bit(sysclk, reset, baud16, enable, midbit);
     input sysclk, reset, baud16, enable;
-    output wire mid_bit;
+    output wire midbit;
     
     integer counter;
     parameter maxcount = 16, midcount = 7;
@@ -40,6 +40,6 @@ module Mid_bit(sysclk, reset, baud16, enable, mid_bit);
         
     end
     
-    assign mid_bit = (counter == midcount);
+    assign midbit = (counter == midcount);
      
 endmodule
