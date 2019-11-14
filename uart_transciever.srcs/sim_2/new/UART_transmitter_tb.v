@@ -22,7 +22,7 @@
 `define second 1000000000
 `define baud 9600
 
-module uart_gen_tb();
+module UART_transmitter_tb();
     reg sysclk, reset, tx;
     
     wire data_valid;
@@ -36,8 +36,6 @@ module uart_gen_tb();
         sysclk, reset, tx,
         data_valid, data_out
     );
-    
-    
     
     initial begin
         sysclk = 0;
