@@ -38,19 +38,22 @@ module Shift_reg(
             data_out <= 0;
             data_shift <= 0;
             
-        end else if (baud16) begin
+        end else begin
+            if (baud16) begin
                 if (midbit && enable) begin
                     data_shift <= data_shift >> 1;
                     data_shift[7] <= RxD;
                 end
               
-                if (shift_out) begin
+                if (midbit && shift_out) begin
                     data_out <= data_shift;
                     valid <= 1;
-                    
-                end else if (valid) begin
-                    valid <= 0;                
                 end
-        end
+            end
+            
+            if (valid) begin
+               valid <= 0;        
+            end
+        end       
     end
 endmodule
