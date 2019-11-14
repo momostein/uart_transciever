@@ -13,6 +13,7 @@ verilog xil_defaultlib  \
 "../../../../uart_transciever.srcs/sim_1/new/Baud16_tb.v" \
 "../../../../uart_transciever.srcs/sim_1/new/Shift_reg_tb.v" \
 "../../../../uart_transciever.srcs/sim_1/new/Baud_tr_tb.v" \
+"../../../../uart_transciever.srcs/sim_1/new/FSM_tr_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
