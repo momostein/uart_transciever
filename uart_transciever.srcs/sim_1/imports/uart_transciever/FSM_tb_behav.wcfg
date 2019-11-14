@@ -3,10 +3,10 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="uart_gen_tb_behav.wdb" id="1">
+      <db_ref path="FSM_tr_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="FSM_tr_tb" />
             <top_module name="glbl" />
-            <top_module name="uart_gen_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
@@ -28,16 +28,18 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_gen_tb/tx" type="logic">
-      <obj_property name="ElementShortName">tx</obj_property>
-      <obj_property name="ObjectShortName">tx</obj_property>
+   <wvobject fp_name="/FSM_tr_tb/baud" type="logic">
+      <obj_property name="ElementShortName">baud</obj_property>
+      <obj_property name="ObjectShortName">baud</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_gen_tb/data" type="array">
+   <wvobject fp_name="/FSM_tr_tb/TXstart" type="logic">
+      <obj_property name="ElementShortName">TXstart</obj_property>
+      <obj_property name="ObjectShortName">TXstart</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tr_tb/data" type="array">
       <obj_property name="ElementShortName">data[7:0]</obj_property>
       <obj_property name="ObjectShortName">data[7:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/uart_gen_tb/data_valid" type="logic">
       <obj_property name="ElementShortName">data_valid</obj_property>

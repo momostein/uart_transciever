@@ -19,26 +19,25 @@ proc create_report { reportName command } {
 }
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/dev/uni/vivado/uart_transciever/uart_transciever.cache/wt [current_project]
-set_property parent.project_path C:/dev/uni/vivado/uart_transciever/uart_transciever.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
-set_property ip_output_repo c:/dev/uni/vivado/uart_transciever/uart_transciever.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/FSM.v
-  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Mid_bit.v
-  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Baud16.v
-  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Shift_reg.v
-  C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_reciever.v
+  {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.srcs/sources_1/new/FSM.v}
+  {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.srcs/sources_1/new/Mid_bit.v}
+  {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.srcs/sources_1/new/Baud16.v}
+  {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.srcs/sources_1/new/Shift_reg.v}
+  {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.srcs/sources_1/new/UART_reciever.v}
+  {C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.srcs/sources_1/new/Baud_tr.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

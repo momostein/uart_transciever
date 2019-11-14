@@ -54,7 +54,7 @@ module uart_gen_tb();
         #100 reset = 1;       
                        
         repeat(datacount) begin
-            #(($random % 500)) data = $random;
+            #(($urandom % 500)) data = $random;
             #(`second/`baud) tx=0; //startbit
             #(`second/`baud) tx=data[0]; //bit0
             #(`second/`baud) tx=data[1]; //bit1

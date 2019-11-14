@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 14 11:13:49 2019
+# Process ID: 13984
+# Current directory: C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.runs/impl_1
+# Command line: vivado.exe -log UART_reciever.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source UART_reciever.tcl -notrace
+# Log file: C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.runs/impl_1/UART_reciever.vdi
+# Journal file: C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source UART_reciever.tcl -notrace

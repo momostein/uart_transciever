@@ -1,4 +1,4 @@
-webtalk_init -webtalk_dir C:/dev/uni/vivado/uart_transciever/uart_transciever.sim/sim_1/behav/xsim/xsim.dir/uart_gen_tb_behav/webtalk/
+webtalk_init -webtalk_dir C:/Users/Jonas/Documents/School/2019-2020/Programeerbare componenten practicum/project/uart_transciever/uart_transciever.sim/sim_1/behav/xsim/xsim.dir/uart_gen_tb_behav/webtalk/
 webtalk_register_client -client project
 webtalk_add_data -client project -key date_generated -value "Thu Nov 14 11:22:05 2019" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
