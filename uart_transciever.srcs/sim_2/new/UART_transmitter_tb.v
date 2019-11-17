@@ -23,7 +23,9 @@
 `define baud 9600
 
 module UART_transmitter_tb();
-    reg sysclk, reset, tx;
+    reg sysclk, reset, TXstart;
+    
+    wire TxD, RxD;
     
     wire data_valid;
     wire [7:0] data_out;    
@@ -33,9 +35,16 @@ module UART_transmitter_tb();
     parameter datacount = 4;
     
     UART_reciever UARTREC(
-        sysclk, reset, tx,
+        sysclk, reset, RxD,
         data_valid, data_out
     );
+    
+    UART_transmitter DUT(
+        sysclk, reset, TXstart, data,
+        TxD
+    );
+    
+    assign RxD = TxD;
     
     initial begin
         sysclk = 0;
@@ -48,28 +57,22 @@ module UART_transmitter_tb();
     
      
     initial begin
-        reset = 1;
-        tx = 1;
-        #100 reset = 0;
-        #100 reset = 1;       
-                       
-        repeat(datacount) begin
-            #(($urandom % 500)) data = $random;
-            #(`second/`baud) tx=0; //startbit
-            #(`second/`baud) tx=data[0]; //bit0
-            #(`second/`baud) tx=data[1]; //bit1
-            #(`second/`baud) tx=data[2]; //bit2
-            #(`second/`baud) tx=data[3]; //bit3
-            #(`second/`baud) tx=data[4]; //bit4
-            #(`second/`baud) tx=data[5]; //bit5
-            #(`second/`baud) tx=data[6]; //bit6
-            #(`second/`baud) tx=data[7]; //bit7
-            #(`second/`baud) tx=1; //stop       
-            
-            #(`second/`baud) tx=1; //stop  
-        end
-        #(`second/`baud) $finish;
-    end
+       reset = 1;
+       TXstart = 0;
+       
+       #10000 reset = 0;
+       #10000 reset = 1;
+       
+       repeat(datacount) begin
+           #(($urandom % 500)) data = $random;
+           #20000 TXstart = 1;
+           #10000 TXstart = 0;
+           
+           @(posedge data_valid);
+           #(`second/`baud);
+       end
+       #(`second/`baud) $finish;
+   end
     
     initial begin
         forever begin

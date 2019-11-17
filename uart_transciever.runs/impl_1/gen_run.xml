@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1573726420">
-  <File Type="PA-TCL" Name="UART_reciever.tcl"/>
   <File Type="BITSTR-BMM" Name="UART_reciever_bd.bmm"/>
-  <File Type="REPORTS-TCL" Name="UART_reciever_reports.tcl"/>
+  <File Type="PA-TCL" Name="UART_reciever.tcl"/>
   <File Type="OPT-DCP" Name="UART_reciever_opt.dcp"/>
+  <File Type="REPORTS-TCL" Name="UART_reciever_reports.tcl"/>
   <File Type="OPT-HWDEF" Name="UART_reciever.hwdef"/>
-  <File Type="PWROPT-DCP" Name="UART_reciever_pwropt.dcp"/>
   <File Type="BG-BGN" Name="UART_reciever.bgn"/>
+  <File Type="PWROPT-DCP" Name="UART_reciever_pwropt.dcp"/>
   <File Type="PLACE-DCP" Name="UART_reciever_placed.dcp"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="UART_reciever_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="UART_reciever_postplace_pwropt.dcp"/>

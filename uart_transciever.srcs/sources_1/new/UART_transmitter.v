@@ -22,20 +22,22 @@
 
 module UART_transmitter(sysclk, reset,TXstart,data,TxD);
 
-input sysclk, reset, TXstart, data;//IN
-output wire TxD;//OUT
+input sysclk, reset, TXstart;
+input [7:0] data;
+
+output wire TxD;
 
 wire baud;//Internal connections
 
 //baud block
 Baud_tr BAUDTRANS(
-    sysclk,reset, //in
+    sysclk, reset, //in
     baud    //out
 
 );
 //FMS blok
 FSM_tr FSMTRANS(
-    sysclk, reset, baud, data, TXstart, //in
+    sysclk, reset, baud, TXstart, data, //in
     TxD  //out
 
 );

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="999993316fs"></ZoomStartTime>
-      <ZoomEndTime time="1000001337fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4760680000001fs"></ZoomEndTime>
+      <Cursor1Time time="1099940505000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="121"></NameColumnWidth>
-      <ValueColumnWidth column_width="95"></ValueColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="4" />
    <wvobject fp_name="/UART_transmitter_tb/sysclk" type="logic">
       <obj_property name="ElementShortName">sysclk</obj_property>
       <obj_property name="ObjectShortName">sysclk</obj_property>
@@ -28,24 +28,43 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/UART_transmitter_tb/tx" type="logic">
-      <obj_property name="ElementShortName">tx</obj_property>
-      <obj_property name="ObjectShortName">tx</obj_property>
+   <wvobject fp_name="group10" type="group">
+      <obj_property name="label">Transmitter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/UART_transmitter_tb/data" type="array">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transmitter_tb/TXstart" type="logic">
+         <obj_property name="ElementShortName">TXstart</obj_property>
+         <obj_property name="ObjectShortName">TXstart</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transmitter_tb/DUT/FSMTRANS/baud" type="logic">
+         <obj_property name="ElementShortName">baud</obj_property>
+         <obj_property name="ObjectShortName">baud</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transmitter_tb/DUT/FSMTRANS/state" type="array">
+         <obj_property name="ElementShortName">state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transmitter_tb/TxD" type="logic">
+         <obj_property name="ElementShortName">TxD</obj_property>
+         <obj_property name="ObjectShortName">TxD</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/UART_transmitter_tb/data_valid" type="logic">
-      <obj_property name="ElementShortName">data_valid</obj_property>
-      <obj_property name="ObjectShortName">data_valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/UART_transmitter_tb/data_out" type="array">
-      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/UART_transmitter_tb/data" type="array">
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/UART_transmitter_tb/datacount" type="array">
-      <obj_property name="ElementShortName">datacount[31:0]</obj_property>
-      <obj_property name="ObjectShortName">datacount[31:0]</obj_property>
+   <wvobject fp_name="group20" type="group">
+      <obj_property name="label">Reciever</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/UART_transmitter_tb/data_valid" type="logic">
+         <obj_property name="ElementShortName">data_valid</obj_property>
+         <obj_property name="ObjectShortName">data_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transmitter_tb/data_out" type="array">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
