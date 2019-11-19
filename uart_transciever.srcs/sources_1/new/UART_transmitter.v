@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module UART_transmitter(sysclk, reset,TXstart,data,TxD);
+module UART_transmitter(sysclk, reset, TXstart, data, TxD);
 
 input sysclk, reset, TXstart;
 input [7:0] data;
