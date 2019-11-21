@@ -1,32 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1573726420">
-  <File Type="BITSTR-BMM" Name="UART_reciever_bd.bmm"/>
-  <File Type="PA-TCL" Name="UART_reciever.tcl"/>
-  <File Type="OPT-DCP" Name="UART_reciever_opt.dcp"/>
-  <File Type="REPORTS-TCL" Name="UART_reciever_reports.tcl"/>
-  <File Type="OPT-HWDEF" Name="UART_reciever.hwdef"/>
-  <File Type="BG-BGN" Name="UART_reciever.bgn"/>
-  <File Type="PWROPT-DCP" Name="UART_reciever_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="UART_reciever_placed.dcp"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="UART_reciever_incremental_reuse_pre_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="UART_reciever_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="UART_reciever.bin"/>
-  <File Type="PHYSOPT-DCP" Name="UART_reciever_physopt.dcp"/>
-  <File Type="BITSTR-MSK" Name="UART_reciever.msk"/>
-  <File Type="ROUTE-ERROR-DCP" Name="UART_reciever_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="UART_reciever_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="UART_reciever_routed_bb.dcp"/>
-  <File Type="BITSTR-LTX" Name="UART_reciever.ltx"/>
-  <File Type="BITSTR-MMI" Name="UART_reciever.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="UART_reciever.sysdef"/>
-  <File Type="ROUTE-TIMING-PB" Name="UART_reciever_timing_summary_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="UART_reciever_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="UART_reciever_postroute_physopt_bb.dcp"/>
-  <File Type="BG-BIT" Name="UART_reciever.bit"/>
-  <File Type="BITSTR-RBT" Name="UART_reciever.rbt"/>
-  <File Type="BITSTR-NKY" Name="UART_reciever.nky"/>
-  <File Type="BG-DRC" Name="UART_reciever.drc"/>
-  <File Type="RDI-RDI" Name="UART_reciever.vdi"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1574336308">
+  <File Type="BITSTR-BMM" Name="UART_transciever_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="UART_transciever_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="UART_transciever_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="UART_transciever_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="UART_transciever.tcl"/>
+  <File Type="OPT-TIMING" Name="UART_transciever_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="UART_transciever_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="UART_transciever_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="UART_transciever_reports.tcl"/>
+  <File Type="OPT-DRC" Name="UART_transciever_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="UART_transciever.hwdef"/>
+  <File Type="PWROPT-DCP" Name="UART_transciever_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="UART_transciever_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="UART_transciever_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="UART_transciever_placed.dcp"/>
+  <File Type="PLACE-IO" Name="UART_transciever_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="UART_transciever_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="UART_transciever_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="UART_transciever_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="UART_transciever_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="UART_transciever_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="UART_transciever_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="UART_transciever.bgn"/>
+  <File Type="PLACE-TIMING" Name="UART_transciever_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="UART_transciever_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="UART_transciever.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="UART_transciever_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="UART_transciever_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="UART_transciever_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="UART_transciever.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="UART_transciever_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="UART_transciever_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="UART_transciever_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="UART_transciever_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="UART_transciever_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="UART_transciever_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="UART_transciever.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="UART_transciever_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="UART_transciever.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="UART_transciever_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="UART_transciever_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="UART_transciever.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="UART_transciever_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="UART_transciever_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="UART_transciever_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="UART_transciever_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="UART_transciever_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="UART_transciever_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="UART_transciever_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="UART_transciever_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="UART_transciever_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="UART_transciever_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="UART_transciever_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="UART_transciever_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="UART_transciever_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="UART_transciever_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="UART_transciever_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="UART_transciever_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="UART_transciever_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="UART_transciever_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="UART_transciever_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="UART_transciever.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="UART_transciever_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="UART_transciever.rbt"/>
+  <File Type="BITSTR-NKY" Name="UART_transciever.nky"/>
+  <File Type="BG-DRC" Name="UART_transciever.drc"/>
+  <File Type="RDI-RDI" Name="UART_transciever.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -72,14 +113,42 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_tr.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UART_transmitter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UART_transciever.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="UART_reciever"/>
+      <Option Name="TopModule" Val="UART_transciever"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/UART_transciever_const.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/UART_transciever_const.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

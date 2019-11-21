@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module UART_transmitter(sysclk, reset, TXstart, data, TxD);
+module UART_transmitter(sysclk, reset, TxStart, data, TxD, TxReady);
 
-input sysclk, reset, TXstart;
+input sysclk, reset, TxStart;
 input [7:0] data;
 
-output wire TxD;
+output wire TxD, TxReady;
 
 wire baud;//Internal connections
 
@@ -37,8 +37,8 @@ Baud_tr BAUDTRANS(
 );
 //FMS blok
 FSM_tr FSMTRANS(
-    sysclk, reset, baud, TXstart, data, //in
-    TxD  //out
+    sysclk, reset, baud, TxStart, data, //in
+    TxD, TxReady  //out
 
 );
 

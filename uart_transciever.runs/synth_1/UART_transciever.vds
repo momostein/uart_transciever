@@ -1,0 +1,527 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 21 12:38:32 2019
+# Process ID: 9744
+# Current directory: C:/dev/uni/vivado/uart_transciever/uart_transciever.runs/synth_1
+# Command line: vivado.exe -log UART_transciever.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_transciever.tcl
+# Log file: C:/dev/uni/vivado/uart_transciever/uart_transciever.runs/synth_1/UART_transciever.vds
+# Journal file: C:/dev/uni/vivado/uart_transciever/uart_transciever.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source UART_transciever.tcl -notrace
+Command: synth_design -top UART_transciever -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7620 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 366.184 ; gain = 97.617
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'UART_transciever' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:23]
+	Parameter WAIT bound to: 2'b00 
+	Parameter READY bound to: 2'b01 
+	Parameter SEND bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'UART_reciever' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_reciever.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Baud16' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Baud16.v:24]
+	Parameter maxcount bound to: 813 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Baud16' (1#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Baud16.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Mid_bit' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Mid_bit.v:23]
+	Parameter maxcount bound to: 16 - type: integer 
+	Parameter midcount bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Mid_bit' (2#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Mid_bit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Shift_reg' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Shift_reg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Shift_reg' (3#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Shift_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FSM' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/FSM.v:23]
+	Parameter IDLE bound to: 4'b0000 
+	Parameter STARTBIT bound to: 4'b0001 
+	Parameter BIT0 bound to: 4'b0010 
+	Parameter BIT1 bound to: 4'b0011 
+	Parameter BIT2 bound to: 4'b0100 
+	Parameter BIT3 bound to: 4'b0101 
+	Parameter BIT4 bound to: 4'b0110 
+	Parameter BIT5 bound to: 4'b0111 
+	Parameter BIT6 bound to: 4'b1000 
+	Parameter BIT7 bound to: 4'b1001 
+	Parameter STOPBIT bound to: 4'b1010 
+INFO: [Synth 8-6155] done synthesizing module 'FSM' (4#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/FSM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'UART_reciever' (5#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_reciever.v:23]
+INFO: [Synth 8-6157] synthesizing module 'UART_transmitter' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transmitter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Baud_tr' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Baud_tr.v:23]
+	Parameter Maxcount bound to: 13019 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Baud_tr' (6#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/Baud_tr.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FSM_tr' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/FSM_tr.v:23]
+	Parameter IDLE bound to: 4'b0000 
+	Parameter WAITBAUD bound to: 4'b0001 
+	Parameter STARTBIT bound to: 4'b0010 
+	Parameter BIT0 bound to: 4'b0011 
+	Parameter BIT1 bound to: 4'b0101 
+	Parameter BIT2 bound to: 4'b0110 
+	Parameter BIT3 bound to: 4'b0111 
+	Parameter BIT4 bound to: 4'b1000 
+	Parameter BIT5 bound to: 4'b1001 
+	Parameter BIT6 bound to: 4'b1010 
+	Parameter BIT7 bound to: 4'b1011 
+	Parameter STOPBIT bound to: 4'b1100 
+INFO: [Synth 8-6155] done synthesizing module 'FSM_tr' (7#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/FSM_tr.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'UART_transmitter' (8#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transmitter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'UART_transciever' (9#1) [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 421.152 ; gain = 152.586
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 421.152 ; gain = 152.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 421.152 ; gain = 152.586
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED_out[7]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_out[6]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_out[5]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_out[4]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW_in[7]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW_in[6]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW_in[5]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW_in[4]'. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/constrs_1/new/UART_transciever_const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_transciever_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/UART_transciever_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 746.332 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 746.332 ; gain = 477.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 746.332 ; gain = 477.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 746.332 ; gain = 477.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "baud16" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSM'
+INFO: [Synth 8-5544] ROM "shift_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "shift_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "midbit_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "baud" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSM_tr'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_transciever'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                      00000000001 |                             0000
+                STARTBIT |                      00000000010 |                             0001
+                    BIT0 |                      00000000100 |                             0010
+                    BIT1 |                      00000001000 |                             0011
+                    BIT2 |                      00000010000 |                             0100
+                    BIT3 |                      00000100000 |                             0101
+                    BIT4 |                      00001000000 |                             0110
+                    BIT5 |                      00010000000 |                             0111
+                    BIT6 |                      00100000000 |                             1000
+                    BIT7 |                      01000000000 |                             1001
+                 STOPBIT |                      10000000000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                             0000
+                WAITBAUD |                             0001 |                             0001
+                STARTBIT |                             0010 |                             0010
+                    BIT0 |                             0011 |                             0011
+                    BIT1 |                             0100 |                             0101
+                    BIT2 |                             0101 |                             0110
+                    BIT3 |                             0110 |                             0111
+                    BIT4 |                             0111 |                             1000
+                    BIT5 |                             1000 |                             1001
+                    BIT6 |                             1001 |                             1010
+                    BIT7 |                             1010 |                             1011
+                 STOPBIT |                             1011 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'FSM_tr'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                             0001 |                               00
+                   READY |                             0010 |                               01
+                    SEND |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'UART_transciever'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 746.332 ; gain = 477.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	  12 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module UART_transciever 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module Baud16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module Mid_bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module Shift_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 1     
+Module Baud_tr 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module FSM_tr 
+Detailed RTL Component Info : 
++---Muxes : 
+	  12 Input      4 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "REC/BAUD/baud16" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "TRANS/BAUDTRANS/baud" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[4]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[5]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[6]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[7]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[8]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[9]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[10]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[11]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[12]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[13]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[14]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[15]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[16]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[17]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[18]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[19]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[20]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[21]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[22]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[23]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[24]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[25]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[26]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[27]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[28]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[29]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'REC/MIDBIT/counter_reg[30]' (FDRE) to 'REC/MIDBIT/counter_reg[31]'
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[3]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[2]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[1]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[0]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[3]__0) is unused and will be removed from module UART_transciever.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'LED_out_reg[3]__0/Q' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[2]__0) is unused and will be removed from module UART_transciever.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'LED_out_reg[2]__0/Q' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[1]__0) is unused and will be removed from module UART_transciever.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'LED_out_reg[1]__0/Q' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+WARNING: [Synth 8-3332] Sequential element (LED_out_reg[0]__0) is unused and will be removed from module UART_transciever.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'LED_out_reg[0]__0/Q' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:69]
+WARNING: [Synth 8-3332] Sequential element (SW_mem_reg[3]) is unused and will be removed from module UART_transciever.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net SW_mem1_out[3] with 1st driver pin 'SW_mem_reg[3]/Q' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net SW_mem1_out[3] with 2nd driver pin 'GND' [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:70]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net SW_mem1_out[3] is connected to constant driver, other driver is ignored [C:/dev/uni/vivado/uart_transciever/uart_transciever.srcs/sources_1/new/UART_transciever.v:70]
+WARNING: [Synth 8-3332] Sequential element (REC/MIDBIT/counter_reg[31]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/valid_reg) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[7]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[6]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[5]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[4]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[3]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[2]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[1]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_shift_reg[0]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[7]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[6]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[5]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[4]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[3]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[2]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[1]) is unused and will be removed from module UART_transciever.
+WARNING: [Synth 8-3332] Sequential element (REC/SHIFTREG/data_out_reg[0]) is unused and will be removed from module UART_transciever.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 746.332 ; gain = 477.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 753.984 ; gain = 485.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 753.984 ; gain = 485.418
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    26|
+|3     |LUT1   |     5|
+|4     |LUT2   |    10|
+|5     |LUT3   |    21|
+|6     |LUT4   |    18|
+|7     |LUT5   |     8|
+|8     |LUT6   |     9|
+|9     |FDRE   |    88|
+|10    |FDSE   |     2|
+|11    |IBUF   |     7|
+|12    |OBUF   |     5|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+-----------------+------+
+|      |Instance      |Module           |Cells |
++------+--------------+-----------------+------+
+|1     |top           |                 |   200|
+|2     |  REC         |UART_reciever    |    95|
+|3     |    BAUD      |Baud16           |    70|
+|4     |    MIDBIT    |Mid_bit          |    11|
+|5     |    _FSM      |FSM              |    14|
+|6     |  TRANS       |UART_transmitter |    83|
+|7     |    BAUDTRANS |Baud_tr          |    66|
+|8     |    FSMTRANS  |FSM_tr           |    17|
++------+--------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 15 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 773.734 ; gain = 179.988
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.734 ; gain = 505.168
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+72 Infos, 35 Warnings, 23 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 775.449 ; gain = 519.090
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/dev/uni/vivado/uart_transciever/uart_transciever.runs/synth_1/UART_transciever.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file UART_transciever_utilization_synth.rpt -pb UART_transciever_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 775.449 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 12:39:18 2019...

@@ -8,6 +8,7 @@ verilog xil_defaultlib  \
 "../../../../uart_transciever.srcs/sources_1/new/Baud_tr.v" \
 "../../../../uart_transciever.srcs/sources_1/new/FSM_tr.v" \
 "../../../../uart_transciever.srcs/sources_1/new/UART_transmitter.v" \
+"../../../../uart_transciever.srcs/sources_1/new/UART_transciever.v" \
 "../../../../uart_transciever.srcs/sim_2/new/UART_transmitter_tb.v" \
 
 # compile glbl module

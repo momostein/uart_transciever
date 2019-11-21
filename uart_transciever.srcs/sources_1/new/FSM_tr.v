@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module FSM_tr(sysclk, reset, baud, TXstart, data, TxD);
-    input sysclk, reset, baud, TXstart;
+module FSM_tr(sysclk, reset, baud, TxStart, data, TxD, TxReady);
+    input sysclk, reset, baud, TxStart;
     input [7:0] data;
     
     output reg TxD;
+    output wire TxReady;
     
     reg [3:0] state;
     parameter IDLE = 4'd0,  WAITBAUD = 4'd1,    STARTBIT =4'd2, BIT0 = 4'd3;
@@ -36,7 +37,7 @@ module FSM_tr(sysclk, reset, baud, TXstart, data, TxD);
             state <= IDLE;
         end else begin
             case(state)
-            IDLE:       if(TXstart) state <= WAITBAUD;
+            IDLE:       if(TxStart) state <= WAITBAUD;
             WAITBAUD:   if(baud)    state <= STARTBIT;
             
             STARTBIT:   if(baud)    state <= BIT0;
@@ -75,8 +76,6 @@ module FSM_tr(sysclk, reset, baud, TXstart, data, TxD);
         default:    TxD <= 1;
         endcase 
     end
-        
     
-    
-
+    assign TxReady = (state==IDLE);
 endmodule

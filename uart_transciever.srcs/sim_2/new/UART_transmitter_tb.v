@@ -23,11 +23,11 @@
 `define baud 9600
 
 module UART_transmitter_tb();
-    reg sysclk, reset, TXstart;
+    reg sysclk, reset, TxStart;
     
-    wire TxD, RxD;
+    wire TxD, TxReady;
     
-    wire data_valid;
+    wire RxD, data_valid;
     wire [7:0] data_out;    
     
     reg [7:0] data;
@@ -40,8 +40,8 @@ module UART_transmitter_tb();
     );
     
     UART_transmitter DUT(
-        sysclk, reset, TXstart, data,
-        TxD
+        sysclk, reset, TxStart, data,
+        TxD, TxReady
     );
     
     assign RxD = TxD;
@@ -58,15 +58,15 @@ module UART_transmitter_tb();
      
     initial begin
        reset = 1;
-       TXstart = 0;
+       TxStart = 0;
        
        #10000 reset = 0;
        #10000 reset = 1;
        
        repeat(datacount) begin
            #(($urandom % 500)) data = $random;
-           #20000 TXstart = 1;
-           #10000 TXstart = 0;
+           #20000 TxStart = 1;
+           #10000 TxStart = 0;
            
            @(posedge data_valid);
            #(`second/`baud);
