@@ -46,10 +46,10 @@ module UART_transciever_tb();
         reset = 0;
         SW_in = 0;
         
-        #(`ms) reset = 1;
-        #(`ms) reset = 0;
+        #(100) reset = 1;
+        #(100) reset = 0;
         
-        #(`ms) SW_in = 8'h11;
+        #(1000) SW_in = 5;
         #(2*`ms) $finish;
     end
     

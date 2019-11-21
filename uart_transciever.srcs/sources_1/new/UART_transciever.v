@@ -84,14 +84,14 @@ module UART_transciever(
             default: state  <= WAIT;
             endcase
         end
+        
+        if (valid_rx) begin
+            LED_out <= data_rx[3:0];
+        end
     end
     
-    assign TxStart = (state == SEND);
-    
-    always @(posedge valid_rx) begin
-        LED_out <= data_rx[3:0];
-    end
-    
+    assign TxStart = (state == SEND);   
     assign data_tx [3:0] = SW_mem;
-    assign data_tx [7:3] = 0;
+    assign data_tx [7:4] = 0;
+    
 endmodule

@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"UART_transciever_tb_time_impl.v" \
+"../../../../../uart_transciever.srcs/sim_3/new/UART_transciever_tb.v" \
+
+# Do not sort compile order
+nosort

@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="UART_transciever_tb_behav.wdb" id="1">
+      <db_ref path="UART_transciever_tb_time_impl.wdb" id="1">
          <top_modules>
             <top_module name="UART_transciever_tb" />
             <top_module name="glbl" />
@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="833333333333fs"></ZoomStartTime>
-      <ZoomEndTime time="5833333333334fs"></ZoomEndTime>
-      <Cursor1Time time="5000000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1063450777203fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="121"></NameColumnWidth>
-      <ValueColumnWidth column_width="87"></ValueColumnWidth>
+      <NameColumnWidth column_width="193"></NameColumnWidth>
+      <ValueColumnWidth column_width="105"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="6" />
    <wvobject fp_name="/UART_transciever_tb/sysclk" type="logic">
       <obj_property name="ElementShortName">sysclk</obj_property>
       <obj_property name="ObjectShortName">sysclk</obj_property>
@@ -29,16 +29,36 @@
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
    <wvobject fp_name="/UART_transciever_tb/SW_in" type="array">
-      <obj_property name="ElementShortName">SW_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">SW_in[7:0]</obj_property>
+      <obj_property name="ElementShortName">SW_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SW_in[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/UART_transciever_tb/LED_out" type="array">
-      <obj_property name="ElementShortName">LED_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">LED_out[7:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="ElementShortName">LED_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">LED_out[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/UART_transciever_tb/loopback" type="logic">
       <obj_property name="ElementShortName">loopback</obj_property>
       <obj_property name="ObjectShortName">loopback</obj_property>
+   </wvobject>
+   <wvobject fp_name="group30" type="group">
+      <obj_property name="label">FSM_TR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/FSMTRANS/TxReady" type="logic">
+         <obj_property name="ElementShortName">TxReady</obj_property>
+         <obj_property name="ObjectShortName">TxReady</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/FSMTRANS/out" type="array">
+         <obj_property name="ElementShortName">out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">out[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/FSMTRANS/state" type="array">
+         <obj_property name="ElementShortName">state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/TxD_OBUF" type="logic">
+         <obj_property name="ElementShortName">TxD_OBUF</obj_property>
+         <obj_property name="ObjectShortName">TxD_OBUF</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

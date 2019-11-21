@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Nov 21 12:40:11 2019
+| Date         : Thu Nov 28 11:08:40 2019
 | Host         : DESKTOP-2F709QG running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file UART_transciever_control_sets_placed.rpt
 | Design       : UART_transciever
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |     4 |
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    16 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,11 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      6 |            2 |
-|      8 |            1 |
-|    16+ |            1 |
+|      2 |            1 |
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            5 |
+|    16+ |            4 |
 +--------+--------------+
 
 
@@ -46,12 +48,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | No                     |               2 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              64 |            8 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |             128 |           16 |
+| Yes          | No                    | No                     |              10 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              20 |            5 |
+| Yes          | Yes                   | No                     |              76 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -61,9 +63,17 @@ Table of Contents
 +-------------------+------------------------------------------------+---------------------------------------+------------------+----------------+
 |    Clock Signal   |                  Enable Signal                 |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
 +-------------------+------------------------------------------------+---------------------------------------+------------------+----------------+
-|  sysclk_IBUF_BUFG | SW_mem                                         | BUT_reset_IBUF                        |                1 |              6 |
+|  sysclk_IBUF_BUFG |                                                |                                       |                1 |              2 |
+|  sysclk_IBUF_BUFG | REC/MIDBIT/data_shift                          |                                       |                2 |              4 |
 |  sysclk_IBUF_BUFG | TRANS/FSMTRANS/E[0]                            | BUT_reset_IBUF                        |                1 |              6 |
-|  sysclk_IBUF_BUFG | TRANS/FSMTRANS/FSM_sequential_state[3]_i_1_n_0 | BUT_reset_IBUF                        |                3 |              8 |
+|  sysclk_IBUF_BUFG | REC/BAUD/baud16                                | REC/_FSM/SR[0]                        |                2 |              8 |
+|  sysclk_IBUF_BUFG | REC/_FSM/E[0]                                  | BUT_reset_IBUF                        |                1 |              8 |
+|  sysclk_IBUF_BUFG | REC/SHIFTREG/LED_out_reg[0]                    |                                       |                1 |              8 |
+|  sysclk_IBUF_BUFG | TRANS/FSMTRANS/FSM_sequential_state[3]_i_1_n_0 | BUT_reset_IBUF                        |                1 |              8 |
+|  sysclk_IBUF_BUFG | SW_mem                                         | BUT_reset_IBUF                        |                1 |              8 |
+|  sysclk_IBUF_BUFG | REC/MIDBIT/data_shift                          | BUT_reset_IBUF                        |                1 |             16 |
+|  sysclk_IBUF_BUFG | REC/_FSM/FSM_onehot_state[10]_i_1_n_0          | BUT_reset_IBUF                        |                4 |             22 |
+|  sysclk_IBUF_BUFG |                                                | REC/BAUD/counter[0]_i_1__1_n_0        |                8 |             64 |
 |  sysclk_IBUF_BUFG |                                                | TRANS/BAUDTRANS/counter[0]_i_1__0_n_0 |                8 |             64 |
 +-------------------+------------------------------------------------+---------------------------------------+------------------+----------------+
 

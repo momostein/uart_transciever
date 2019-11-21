@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Nov 21 12:40:35 2019
+| Date             : Thu Nov 28 11:09:03 2019
 | Host             : DESKTOP-2F709QG running 64-bit major release  (build 9200)
 | Command          : report_power -file UART_transciever_power_routed.rpt -pb UART_transciever_power_summary_routed.pb -rpx UART_transciever_power_routed.rpx
 | Design           : UART_transciever
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.792        |
+| Total On-Chip Power (W)  | 1.056        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.691        |
-| Device Static (W)        | 0.101        |
+| Dynamic (W)              | 0.951        |
+| Device Static (W)        | 0.105        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 75.9         |
-| Junction Temperature (C) | 34.1         |
+| Max Ambient (C)          | 72.8         |
+| Junction Temperature (C) | 37.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,20 +49,21 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.147 |       94 |       --- |             --- |
-|   LUT as Logic |     0.107 |       37 |     17600 |            0.21 |
-|   Register     |     0.017 |       42 |     35200 |            0.12 |
-|   CARRY4       |     0.017 |       11 |      4400 |            0.25 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        3 |       --- |             --- |
-| Signals        |     0.182 |       79 |       --- |             --- |
-| I/O            |     0.361 |       11 |       100 |           11.00 |
-| Static Power   |     0.101 |          |           |                 |
-| Total          |     0.792 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |     0.201 |      214 |       --- |             --- |
+|   LUT as Logic          |     0.137 |       66 |     17600 |            0.38 |
+|   CARRY4                |     0.033 |       24 |      4400 |            0.55 |
+|   Register              |     0.024 |      108 |     35200 |            0.31 |
+|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
+|   LUT as Shift Register |    <0.001 |        1 |      6000 |            0.02 |
+|   Others                |     0.000 |        9 |       --- |             --- |
+| Signals                 |     0.280 |      170 |       --- |             --- |
+| I/O                     |     0.470 |       12 |       100 |           12.00 |
+| Static Power            |     0.105 |          |           |                 |
+| Total                   |     1.056 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -71,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.354 |       0.349 |      0.005 |
-| Vccaux    |       1.800 |     0.019 |       0.013 |      0.006 |
-| Vcco33    |       3.300 |     0.098 |       0.097 |      0.001 |
+| Vccint    |       1.000 |     0.510 |       0.504 |      0.005 |
+| Vccaux    |       1.800 |     0.023 |       0.016 |      0.007 |
+| Vcco33    |       3.300 |     0.127 |       0.126 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -84,7 +85,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.021 |       0.000 |      0.021 |
+| Vccpint   |       1.000 |     0.024 |       0.000 |      0.024 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,10 +146,15 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| UART_transciever |     0.691 |
-|   TRANS          |     0.244 |
-|     BAUDTRANS    |     0.193 |
-|     FSMTRANS     |     0.052 |
+| UART_transciever |     0.951 |
+|   REC            |     0.192 |
+|     BAUD         |     0.182 |
+|     MIDBIT       |     0.007 |
+|     SHIFTREG     |     0.001 |
+|     _FSM         |     0.002 |
+|   TRANS          |     0.208 |
+|     BAUDTRANS    |     0.170 |
+|     FSMTRANS     |     0.039 |
 +------------------+-----------+
 
 
