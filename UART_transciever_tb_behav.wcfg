@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="UART_transciever_tb_time_impl.wdb" id="1">
+      <db_ref path="UART_transciever_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="UART_transciever_tb" />
             <top_module name="glbl" />
@@ -12,53 +12,89 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1063450777203fs"></ZoomEndTime>
+      <ZoomEndTime time="40600200000001fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="193"></NameColumnWidth>
-      <ValueColumnWidth column_width="105"></ValueColumnWidth>
+      <NameColumnWidth column_width="99"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
-   <wvobject fp_name="/UART_transciever_tb/sysclk" type="logic">
-      <obj_property name="ElementShortName">sysclk</obj_property>
-      <obj_property name="ObjectShortName">sysclk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/UART_transciever_tb/reset" type="logic">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/UART_transciever_tb/SW_in" type="array">
-      <obj_property name="ElementShortName">SW_in[3:0]</obj_property>
-      <obj_property name="ObjectShortName">SW_in[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/UART_transciever_tb/LED_out" type="array">
-      <obj_property name="ElementShortName">LED_out[3:0]</obj_property>
-      <obj_property name="ObjectShortName">LED_out[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/UART_transciever_tb/loopback" type="logic">
-      <obj_property name="ElementShortName">loopback</obj_property>
-      <obj_property name="ObjectShortName">loopback</obj_property>
-   </wvobject>
-   <wvobject fp_name="group30" type="group">
-      <obj_property name="label">FSM_TR</obj_property>
+   <WVObjectSize size="3" />
+   <wave_markers>
+      <marker time="36000200000000" label="" />
+   </wave_markers>
+   <wvobject fp_name="group76" type="group">
+      <obj_property name="label">Inputs</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/FSMTRANS/TxReady" type="logic">
+      <wvobject fp_name="/UART_transciever_tb/sysclk" type="logic">
+         <obj_property name="ElementShortName">sysclk</obj_property>
+         <obj_property name="ObjectShortName">sysclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/SW_in" type="array">
+         <obj_property name="ElementShortName">SW_in[3:0]</obj_property>
+         <obj_property name="ObjectShortName">SW_in[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/loopback" type="logic">
+         <obj_property name="ElementShortName">loopback</obj_property>
+         <obj_property name="ObjectShortName">loopback</obj_property>
+         <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group77" type="group">
+      <obj_property name="label">Hidden Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/UART_transciever_tb/DUT/SW_mem" type="array">
+         <obj_property name="ElementShortName">SW_mem[3:0]</obj_property>
+         <obj_property name="ObjectShortName">SW_mem[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/DUT/state" type="array">
+         <obj_property name="ElementShortName">state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">state[1:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/DUT/TxReady" type="logic">
          <obj_property name="ElementShortName">TxReady</obj_property>
          <obj_property name="ObjectShortName">TxReady</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/FSMTRANS/out" type="array">
-         <obj_property name="ElementShortName">out[2:0]</obj_property>
-         <obj_property name="ObjectShortName">out[2:0]</obj_property>
+      <wvobject fp_name="/UART_transciever_tb/DUT/TxStart" type="logic">
+         <obj_property name="ElementShortName">TxStart</obj_property>
+         <obj_property name="ObjectShortName">TxStart</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/FSMTRANS/state" type="array">
-         <obj_property name="ElementShortName">state[3:0]</obj_property>
-         <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <wvobject fp_name="/UART_transciever_tb/DUT/valid_rx" type="logic">
+         <obj_property name="ElementShortName">valid_rx</obj_property>
+         <obj_property name="ObjectShortName">valid_rx</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/UART_transciever_tb/DUT/TRANS/TxD_OBUF" type="logic">
-         <obj_property name="ElementShortName">TxD_OBUF</obj_property>
-         <obj_property name="ObjectShortName">TxD_OBUF</obj_property>
+   </wvobject>
+   <wvobject fp_name="group78" type="group">
+      <obj_property name="label">Outputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/UART_transciever_tb/loopback" type="logic">
+         <obj_property name="ElementShortName">loopback</obj_property>
+         <obj_property name="ObjectShortName">loopback</obj_property>
+         <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/UART_transciever_tb/LED_out" type="array">
+         <obj_property name="ElementShortName">LED_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">LED_out[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

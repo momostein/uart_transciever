@@ -34,6 +34,8 @@ module UART_transciever_tb();
         .RxD(loopback), .TxD(loopback)
     );
     
+    integer i;
+    
     initial begin // 125 MHz clock
         sysclk = 0;
         forever begin
@@ -46,11 +48,22 @@ module UART_transciever_tb();
         reset = 0;
         SW_in = 0;
         
+        // Reset (active high)
         #(100) reset = 1;
         #(100) reset = 0;
         
-        #(1000) SW_in = 5;
-        #(2*`ms) $finish;
+        // All possible combinations
+        for (i = 0; i <= 4'b1111; i = i + 1) begin
+            #(2*`ms) SW_in = i;
+        end
+        
+        // Switches change too fast
+        #(4*`ms)    SW_in = 0;
+        #(0.3*`ms)  SW_in = 1;
+        #(0.3*`ms)  SW_in = 2;
+        
+        #(4*`ms) $finish;
+        
     end
     
 endmodule

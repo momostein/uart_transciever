@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1055554721723fs"></ZoomStartTime>
-      <ZoomEndTime time="1110496445113fs"></ZoomEndTime>
-      <Cursor1Time time="4760680000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4760680000001fs"></ZoomEndTime>
+      <Cursor1Time time="429311321000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="121"></NameColumnWidth>
-      <ValueColumnWidth column_width="87"></ValueColumnWidth>
+      <ValueColumnWidth column_width="83"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="4" />
    <wvobject fp_name="/UART_transmitter_tb/sysclk" type="logic">
@@ -40,18 +40,26 @@
       <wvobject fp_name="/UART_transmitter_tb/DUT/FSMTRANS/baud" type="logic">
          <obj_property name="ElementShortName">baud</obj_property>
          <obj_property name="ObjectShortName">baud</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/UART_transmitter_tb/DUT/FSMTRANS/state" type="array">
          <obj_property name="ElementShortName">state[3:0]</obj_property>
          <obj_property name="ObjectShortName">state[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/UART_transmitter_tb/TxD" type="logic">
          <obj_property name="ElementShortName">TxD</obj_property>
          <obj_property name="ObjectShortName">TxD</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/UART_transmitter_tb/TxReady" type="logic">
          <obj_property name="ElementShortName">TxReady</obj_property>
          <obj_property name="ObjectShortName">TxReady</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group20" type="group">
@@ -61,10 +69,14 @@
       <wvobject fp_name="/UART_transmitter_tb/data_valid" type="logic">
          <obj_property name="ElementShortName">data_valid</obj_property>
          <obj_property name="ObjectShortName">data_valid</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/UART_transmitter_tb/data_out" type="array">
          <obj_property name="ElementShortName">data_out[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

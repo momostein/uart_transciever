@@ -78,7 +78,7 @@ module uart_gen_tb();
             @(posedge data_valid);
             #10;
             if (data_out == data) begin
-                $display("Outputs matched at %d", $time);
+                $display("Outputs matched at %d ns", $time);
                 
             end else begin
                 $display(
